@@ -13,7 +13,7 @@
 ++ 운영하는 서비스에서 오류가 발생할 경우 이유가 무엇인지 확인하기 위함
 
 + controller/PingController.java
-```
+```java
 @RestController
 public class PingController {
     @GetMapping
@@ -29,7 +29,7 @@ public class PingController {
 + Map은 사실상 익명 객체라고 생각. 다른사람과 ㄱ옹하면 응답을 만든건지 가독성이 떨어지기 때문에 클래스로 묶어 응답객체라고 묶어주는 것이 효율적
 
 + dto/Response.java
-```
+```java
 public class Response {
   private String code;
   private String desc;
@@ -67,7 +67,7 @@ public class Response {
 }
 ```
 + controller/PingController.java
-```
+```java
 @RestController
 public class PingController {
     @GetMapping
@@ -82,7 +82,7 @@ public class PingController {
 ## lombok
 + 보일러플레이트 코드의 증가 -> lombok으로 개선
 + 의존성 추가
-```
+```java
 dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.20'
 	annotationProcessor 'org.projectlombok:lombok:1.18.20'
@@ -92,7 +92,7 @@ dependencies {
 ## 동적 타입의 활용
 + Response 객체의 구조에서 data는 항상 String 타입을 받는다. => 항상 String 구조를 가져야 함
 + 제네릭 문법을 통해 개선
-```
+```java
 @Getter
 @Builder
 public class Response<T> {
@@ -101,7 +101,7 @@ public class Response<T> {
 }
 ```
 ## ResponseEntity 객체 활용하기
-```
+```java
 @RestController
 public class PingController {
   @GetMapping
@@ -133,7 +133,7 @@ public class PingController {
 + 같은 Service를 각각의 controller에서 접근 가능할 수 있도록 구분
 
 ## ArticleController 생성 및 ArticleService 생성자 주입
-```
+```java
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/article")
 @RestController
