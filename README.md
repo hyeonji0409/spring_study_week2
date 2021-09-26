@@ -1,7 +1,7 @@
 ﻿# spring_study_week2
 
-+ API를 어떻게 실용적으로 만들까?
-+ 간단한 CRUD Api 만들기
+1. API를 어떻게 실용적으로 만들까?
+2. 간단한 CRUD Api 만들기
 
 ## Spring Web 진입점 생성
 + Controller 객체 생성 -> client의 요청을 받는다.
