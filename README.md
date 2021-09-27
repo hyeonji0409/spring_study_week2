@@ -10,7 +10,7 @@
 
 ## API 구현
 + API는 응답코드와 응답 설명이 필요하다.
-++ 운영하는 서비스에서 오류가 발생할 경우 이유가 무엇인지 확인하기 위함
+	+ 운영하는 서비스에서 오류가 발생할 경우 이유가 무엇인지 확인하기 위함
 
 + controller/PingController.java
 ```java
@@ -117,14 +117,14 @@ public class PingController {
 ```
 ## REST API
 + HTTP method르 행위 표현
-++ @GetMapping: 조회
-++ @PostMapping: 생성
-++ @PutMapping: 변경
-++ @DeleteMapping: 삭제
+	+ @GetMapping: 조회
+	+ @PostMapping: 생성
+	+ @PutMapping: 변경
+	+ @DeleteMapping: 삭제
 
 + REST 구조의 장점
-++ 클라이언트를 위한 API가 아닌 비즈니스 도메인을 표현하는 API임.
-++ Resource / domain을 중심으로 표현
+	+ 클라이언트를 위한 API가 아닌 비즈니스 도메인을 표현하는 API임.
+	+ Resource / domain을 중심으로 표현
 
 ## Article 객체 생성
 
