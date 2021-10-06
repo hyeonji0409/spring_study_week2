@@ -8,7 +8,8 @@ import lombok.Getter;
 //Response 에 있는 code, desc 의 결합도가 떨어지는 이슈를 해결하기 위함.
 public enum ApiCode {
     /* CM COMMON */
-    SUCESS("CM0000", "정상입니다" );
+    SUCESS("CM0000", "정상입니다" ),
+    DATA_IS_NOT_FOUND("CM0001", "데이터가 존재하지 않습니다.");
 
     private final String name;
     private final String desc;

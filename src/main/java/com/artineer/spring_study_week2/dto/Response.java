@@ -9,42 +9,16 @@ import lombok.Getter;
 public class Response<T> {
     private ApiCode code;
     private T data;
+
+    public static Response<Void> ok() {
+        return Response.<Void>builder()
+                .code(ApiCode.SUCESS)
+                .build();
+    }
+    public static <T> Response<T> ok(T data) {
+        return Response.<T>builder()
+                .code(ApiCode.SUCESS)
+                .data(data)
+                .build();
+    }
 }
-/*
-    private Response() {}
-
-    public Response(ApiCode code, String data) {
-        this.code = code;
-        this.data = data;
-    }
-
-    lombok 의 @Getter 를 제공받아 getter 함수 필요 없어짐
-
-    @Builder 제공받아 필요 없어짐
-    //Builder 함수 호출
-    public static Builder builder() {
-        return new Builder();
-    }
-
-    public static class Builder {
-        private final Response response;
-
-        public Builder() {
-            this.response = new Response();
-        }
-
-        public Builder code(ApiCode code) {
-            this.response.code = code;
-            return this;
-        }
-
-        public Builder data(String data) {
-            this.response.data = data;
-            return this;
-        }
-
-        public Response build() {
-            return this.response;
-        }
-    }
-    */

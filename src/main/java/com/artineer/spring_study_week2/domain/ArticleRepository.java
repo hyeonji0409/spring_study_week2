@@ -1,2 +1,7 @@
-package com.artineer.spring_study_week2.domain;public class ArticleRepository {
+package com.artineer.spring_study_week2.domain;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ArticleRepository extends CrudRepository<Article, Long> {
+
 }
